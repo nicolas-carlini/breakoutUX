@@ -1,0 +1,17 @@
+cada 500 puntos decir "amazing"
+cada 1000 puntos decir "IRONMANNNNNN"
+cada 1500 puntos decir "you're the best"
+
+al ganar: 
+    You only live once
+    Love as long as you live
+    The dreamers are the saviors of the world
+    Enthusiasm moves the world
+    Love conquers all
+
+al perder: 
+    Try it again. Fail again. Fail better
+    Once you choose hope, anything’s possible
+    You change your life by changing your heart
+    Turn your wounds into wisdom
+    With pain comes strength

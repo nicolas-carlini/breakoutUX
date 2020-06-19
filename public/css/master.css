@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Nasalization";
+  src: url("../fonts/nasalization-rg.ttf");
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Nasalization";
+  color: white;
+  overflow: hidden;
+}
+
+* {
+  user-select: none;
+}
+
+.container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container.active {
+  display: flex;
+}
+
+.button {
+  text-align: center;
+  width: 200px;
+  padding: 12px;
+  margin: 8px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0 0 8px white;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 4px;
+}
+
+.option-volume {
+  display: flex;
+}
+
+.option-volume > div {
+  padding: 4px;
+}
+
+.option-volume > .label {
+  text-align: center;
+  width: 50px;
+}
+
+.option-volume > .minus-btn,
+.option-volume > .plus-btn {
+  cursor: pointer;
+}
+
+#credits {
+  position: absolute;
+  bottom: 40px;
+}
+
+#leaderboard {
+  position: absolute;
+  width: fit-content;
+  height: 40px;
+  left: 100%;
+  top: 40px;
+  animation: leaderboard 30s infinite linear;
+}
+
+@keyframes leaderboard {
+  0% {
+    left: 100%;
+    transform: translate(0%, 0%);
+  }
+
+  100% {
+    left: 0%;
+    transform: translate(-100%, 0%);
+  }
+}
+
+#option-animated-bg {
+  cursor: pointer;
+}
+
+#game {
+  position: relative;
+  border-radius: 8px;
+  border: 2px solid white;
+  width: 800px;
+  height: 600px;
+}
+
+#gm-paused {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+}
+
+#gm-paused.active {
+  display: block;
+}
+
+#gm-nextlevel {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+}
+
+#gm-nextlevel.active {
+  display: block;
+}
+
+#gm-score {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+
+#gm-player {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+#gm-ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+#gm-bricks .gm-brick {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 30px;
+}
+
+#gm-bricks .gm-brick::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #f62a2a40, #f62a2a80);
+  border: 2px solid #f62a2a;
+  box-shadow: 0 0 8px #f62a2a60;
+}
+
+#gm-bricks .gm-brick[level="5"]::after {
+  background: linear-gradient(to bottom, #822af640, #822af680);
+  border: 2px solid #822af6;
+  box-shadow: 0 0 8px #822af660;
+}
+
+#gm-bricks .gm-brick[level="4"]::after {
+  background: linear-gradient(to bottom, #f62a2a40, #f62a2a80);
+  border: 2px solid #f62a2a;
+  box-shadow: 0 0 8px #f62a2a60;
+}
+
+#gm-bricks .gm-brick[level="3"]::after {
+  background: linear-gradient(to bottom, #fd9b2e40, #fd9b2e80);
+  border: 2px solid #fd9b2e;
+  box-shadow: 0 0 8px #fd9b2e60;
+}
+
+#gm-bricks .gm-brick[level="2"]::after {
+  background: linear-gradient(to bottom, #17ea1d40, #17ea1d80);
+  border: 2px solid #17ea1d;
+  box-shadow: 0 0 8px #17ea1d60;
+}
+
+#gm-bricks .gm-brick[level="1"]::after {
+  background: linear-gradient(to bottom, #2984bb40, #2984bb80);
+  border: 2px solid #2984bb;
+  box-shadow: 0 0 8px #2984bb60;
+}

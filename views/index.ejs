@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Breakout</title>
+    <link rel="stylesheet" href="./css/master.css" />
+    <link rel="stylesheet" href="./css/stars-bg.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="main-menu" class="container">
+      <div id="leaderboard"></div>
+      <img src="./res/logo.png" width="512" style="margin-bottom: 32px" />
+      <div to="game" class="button">Jugar</div>
+      <div to="options" class="button">Opciones</div>
+      <div id="credits">
+        Videojuego creado por Lihuen Molina, Nicolás Carlini y Lucas López. © 2020
+      </div>
+    </div>
+    <div id="options" class="container">
+      <p class="title">Opciones</p>
+      <p>Música de fondo</p>
+      <div id="option-volume-bg" class="option-volume">
+        <div class="minus-btn">-</div>
+        <div class="label">50</div>
+        <div class="plus-btn">+</div>
+      </div>
+      <p>Efectos</p>
+      <div id="option-volume-sfx" class="option-volume">
+        <div class="minus-btn">-</div>
+        <div class="label">100</div>
+        <div class="plus-btn">+</div>
+      </div>
+      <p>Fondo animado</p>
+      <div id="option-animated-bg">
+        Sí
+      </div>
+      <div to="mainMenu" class="button">Volver</div>
+    </div>
+    <div id="game" class="container">
+      <div id="gm-paused">
+        <div>JUEGO EN PAUSA</div>
+        <div>Pulsa ESC para volver al menú principal</div>
+      </div>
+      <div id="gm-nextlevel">
+        <span>NIVEL </span><span id="gm-nextlevelval"></span>
+      </div>
+      <div id="gm-score">
+        <div>
+          <span>PUNTOS: </span>
+          <span id="gm-scoreval">0</span>
+        </div>
+        <div>
+          <span>VIDAS: </span>
+          <span id="gm-livesval">3</span>
+        </div>
+      </div>
+      <div id="gm-player"></div>
+      <div id="gm-ball"></div>
+      <div id="gm-bricks"></div>
+    </div>
+    <div id="stars-bg"></div>
+    <script src="./js/main.js"></script>
+    <script src="./js/stars_bg.js"></script>
+  </body>
+</html>

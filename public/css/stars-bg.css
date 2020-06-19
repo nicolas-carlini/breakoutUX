@@ -1,0 +1,20 @@
+#stars-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+  overflow: hidden;
+}
+
+#stars-bg > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  border-radius: 100%;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 0 8px #fff8;
+}
